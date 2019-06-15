@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width , initial-scale=1" name="viewport">
+        <link href="login.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo">
+                <a href="#">Company</a>
+            </div>
+            <div class="header-right">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">ContactUs</a>
+            </div>
+        </div>
+        <h1>LOGIN FORM</h1>
+        <div class="feature-block">
+            <div class="img">
+                <img src="favicon.png">
+            </div>
+            <div class="inputtext">
+                <br><input type="text" id="1" name="username" placeholder="Enter emailid"  required ><br>
+                <br><input type="text" id="2" name="password"  placeholder="password"   required><br>
+                <br><button class="button" onclick="validate()" >SIGN IN</button><br>
+                <br><a href="register.html">Need Account?</a><br>
+                <br><a href="#">Forgot Password?</a><br>
+            </div>
+
+           
+        </div>
+        
+    
+
+        <div class="footer">
+            <div class="footlogo">
+                <a href="#">About</a>
+                <a href="#">ContactUs</a>
+            </div>
+            <div class="footer-right">
+                <a href="#">copyrights@2019</a>
+            </div>
+        </div>
+
+        <script>
+            var loginlist= new Array();
+                    loginlist=[
+                       {"username":"dhanu","password":"a123"},
+                       {"username":"happy","password":"1234"},
+                       {"username":"employee","password":"okey"}
+               ];
+                function validate()
+                {
+                   
+                var username=document.getElementById("1").value;
+                var password=document.getElementById("2").value;
+                       
+                var logg=false;
+                for(var i=0; i < loginlist.length; i++)
+                {
+                    if(username == loginlist[i].username && password == loginlist[i].password )
+                    {
+                        logg=true;
+                    }
+                }
+                if(logg== true)
+                {
+                window.open("link.html")
+                }
+                else
+                alert("Login failed");
+                };
+            </script>
+    </body>
+</html>
